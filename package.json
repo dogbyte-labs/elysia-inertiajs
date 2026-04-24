@@ -1,0 +1,49 @@
+{
+  "name": "@dogbyte-labs/elysia-inertiajs",
+  "version": "1.0.0",
+  "description": "Elysia plugin for Inertia.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --out-dir dist",
+    "prepare": "tsup src/index.ts --format esm --dts --out-dir dist",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "elysia",
+    "inertia",
+    "plugin",
+    "typescript"
+  ],
+  "author": "@dogbyte-labs",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "volta": {
+    "node": "24.15.0"
+  },
+  "peerDependencies": {
+    "elysia": "^1.x"
+  },
+  "devDependencies": {
+    "elysia": "^1.2.25",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.0"
+  }
+}
